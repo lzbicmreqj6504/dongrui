@@ -6,7 +6,27 @@ Page({
      */
     data: {
         kssj:'',
-        jssj:''
+        jssj:'',
+        zjst:false,
+        items: [
+            { name: 'zjst', value: '最近三天' },
+            { name: 'zjyz', value: '最近一周', checked: 'true' },
+            { name: 'zjyy', value: '最近一月' },
+            { name: 'zjjd', value: '最近季度' },
+           
+          ],
+    },
+    radioChange: function (e) {
+        var str = null;
+        //获取当前选中的值 
+        let selectValue =e.detail.value;
+        //循环遍历
+        for (var value of this.data.items) {
+          if (value.name === selectValue) {
+            str = value.value;
+            break;
+          }
+        }
     },
     kssjChange: function(e) {
         console.log('picker发送选择改变，携带值为', e.detail.value)

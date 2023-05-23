@@ -2,20 +2,26 @@
     <form style="display: flex;text-align: center;width: 95%;margin: 0 auto;justify-content: center;">
         <view style="display: flex;">
             <picker mode="date" header-text="开始时间"  value="{{kssj}}" bindchange="kssjChange">
-            <view class="font30">
-                <input type="text"  style="height: 65rpx;" placeholder="开始时间" class="weui-input" value="{{kssj}}"/>
+                <view class="font30">
+                    <input type="text"  style="height: 65rpx;" placeholder="开始时间" class="weui-input" value="{{kssj}}"/>
+                </view>
+            </picker>
+            <view  class="font31">
+                至
             </view>
-        </picker>
-        <view  class="font31">
-            至
+            <picker mode="date" header-text="结束时间"  value="{{jssj}}" bindchange="jssjChange">
+                <view class="font30">
+                    <input type="text" style="height: 65rpx;" placeholder="结束时间" class="weui-input" value="{{jssj}}"/>
+                </view>
+            </picker>
         </view>
-        <picker mode="date" header-text="结束时间"  value="{{jssj}}" bindchange="jssjChange">
-            <view class="font30">
-                <input type="text" style="height: 65rpx;" placeholder="结束时间" class="weui-input" value="{{jssj}}"/>
-            </view>
-        </picker>
+        <view style="display: flex;margin-top: 30rpx;">
+            <radio-group class="radio-group" bindchange="radioChange">
+                <label class="radio" wx:for="{{items}}">
+                    <view class="tui-menu-list"><radio color="#007aff" value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}</view>
+                </label>
+            </radio-group>
         </view>
-        
     </form>
 
 </view>

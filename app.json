@@ -1,7 +1,8 @@
 {
     "pages": [
-        "pages/Select_data/select_data",
+        
         "pages/user/user",
+        "pages/Select_data/select_data",
         "pages/index/index",
         "pages/map/map",
         "pages/test/test",
