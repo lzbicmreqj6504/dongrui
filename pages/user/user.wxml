@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="mybox">
+
+    <view class="boxBtn" data-index="zkt" bindtap="jrzt">
+      主控台
+    </view>
+    <view class="boxBtn1"  data-index="fkt" bindtap="jrzt">
+      分控台
+    </view>
+  </view>
+</view>

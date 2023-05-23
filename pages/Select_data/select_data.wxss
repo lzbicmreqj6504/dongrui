@@ -1,0 +1,31 @@
+.container{
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+}
+.font30{
+    height: 65rpx;
+    font-size: 30rpx;
+    border:1px solid #f1f1f1;
+    line-height: 65rpx;
+  }
+  .font31{
+    height: 65rpx;
+    font-size: 30rpx;
+    line-height: 65rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+  }
+  .color3{
+    color: #333;
+  }
+  
+  .color6{
+    color: #666;
+  }
+  
+  .timeIcon{
+    color:#666;
+    font-size:18rpx;
+    margin-left: 5rpx;
+  }

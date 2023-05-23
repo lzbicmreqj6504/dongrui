@@ -1,0 +1,103 @@
+<view class="container">
+    <view class="conBox" style="background: #FFFBFB;"> 
+       <view>
+           <view style="padding-bottom: 30rpx;color: #ccc;">
+               设备总数
+           </view>
+           <view style="color: #5756D7;">
+               <text style="font-size: 44rpx;font-weight: bold;">323232</text><text>台</text>
+              
+                <cover-image style="display:inline-block;padding-left: 30rpx;" class="arrow" src="/img/icon/ec_1.png"></cover-image>
+            
+           </view>
+       </view> 
+       <view>
+        <cover-image style="display:inline-block;"  src="/img/icon/ec_2.png"></cover-image>
+       </view>
+    </view>
+    <view class="conBox" style="text-align: center;">
+        <view style="display: flex;flex-direction: column;justify-content: space-around;border-right: 1px solid #ccc;height: 130rpx;position: relative;padding-right: 30rpx;">
+            
+            <checkbox value="v1" checked class="cb"  style="position: absolute;right: 0rpx;top: -6rpx;"/>
+      
+            <view style="color: #007AFF;padding:20rpx">
+                <text style="font-size: 38rpx;font-weight: bold;">3232</text><text>台</text>
+            </view>
+            <view style="color: #ccc;text-align: center;">
+               在线数
+            </view>
+           
+        </view>
+        <view style="display: flex;flex-direction: column;justify-content: space-around;border-right: 1px solid #ccc;height: 130rpx;position: relative;padding-right: 30rpx;">
+            
+            <checkbox value="v1" checked class="cb"  style="position: absolute;right: 0rpx;top: -6rpx;"/>
+      
+            <view style="color: #05AEE6;padding:20rpx">
+                <text style="font-size: 38rpx;font-weight: bold;">3232</text><text>台</text>
+            </view>
+            <view style="color: #ccc;text-align: center;">
+               离线数
+            </view>
+           
+        </view>
+        <view style="display: flex;flex-direction: column;justify-content: space-around;height: 130rpx;position: relative;padding-right: 30rpx;">
+            
+            <!-- <checkbox value="v1" checked class="cb"  style="position: absolute;right: 0rpx;top: -6rpx;"/> -->
+      
+            <view style="color: #34C758;padding:20rpx">
+                <text style="font-size: 38rpx;font-weight: bold;">3232</text><text>台</text>
+            </view>
+            <view style="color: #ccc;text-align: center;">
+               故障设备数
+            </view>
+           
+        </view>
+        
+    </view>
+    <view class="conBox1">
+        <view class="conboxS">
+            <view style="display: flex;flex-direction: column;justify-content: space-around;height: 90%;padding-left: 30rpx;">
+                    <view style="color: #ccc;">
+                        报警台数
+                    </view>
+                    <view style="color: #FF3A30;display: flex;height: 100rpx;line-height: 100rpx;">
+                        <cover-image style="display:inline-block; width: 60rpx;height: 60rpx;margin-top: 20rpx;"  src="/img/icon/ec_3.png"></cover-image><text style="font-size: 44rpx;font-weight: bold;">323232</text><text>台</text>
+                    </view>
+                </view>
+        </view>
+        <view  class="conboxS">
+            <view style="display: flex;flex-direction: column;justify-content: space-around;height: 90%;padding-left: 30rpx;">
+                    <view style="color: #ccc;">
+                        报警次数
+                    </view>
+                    <view style="color: #FF9502;display: flex;height: 100rpx;line-height: 100rpx;">
+                        <cover-image style="display:inline-block; width: 60rpx;height: 60rpx;margin-top: 20rpx;"  src="/img/icon/ec_4.png"></cover-image><text style="font-size: 44rpx;font-weight: bold;">323232</text><text>次</text>
+                    </view>
+                </view>
+        </view>
+    </view>
+
+  <view class="chart-container {{showMap?'container-left':''}}">
+    <ec-canvas wx:if="{{!isDisposed}}" id="mychart-dom-map" id="mychart-dom-map" canvas-id="mychart-map" ec="{{ ec }}"></ec-canvas>
+    <cover-view style="left:{{toolTip.x}}px;top:{{toolTip.y}}px" wx:if="{{showToolTip}}" class="tool-tip">
+      <cover-view>
+        <cover-view>{{toolTip.name}}</cover-view>
+        <cover-view>设备数：{{toolTip.value}}</cover-view>
+        <cover-view>运行中：{{toolTip.value2}}</cover-view>
+        <cover-view>故障：{{toolTip.value3}}</cover-view>
+        <cover-view class="nofont"></cover-view>
+      </cover-view>
+      <cover-view class="tool-detail" bindtap="checkoutDetail">
+        <cover-view>查看详情</cover-view>
+        <cover-image class="arrow" src="/img/icon/arrow.png"></cover-image>
+      </cover-view>
+    </cover-view>
+    <cover-view class="tool-back" wx:if="{{showBack}}">
+      <button bindtap="drawChina">返回</button>
+    </cover-view>
+  </view>
+  <view class="map-view" wx:if="{{showMap}}">
+    <map id="map" longitude="{{centerPoint.longitude}}" latitude="{{centerPoint.latitude}}" scale="11" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>
+    <button bindtap="backChart">返回</button>
+  </view>
+</view>

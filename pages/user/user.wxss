@@ -1,0 +1,44 @@
+/**index.wxss**/
+.container{
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .mybox{
+    width:100%;
+    height:100vh;
+    display:flex;
+    background: url(https://paotui.ctrcv.com/uploads/1/min_app/back.png);
+    background-size: 100% 100%;
+   
+  }
+  .boxBtn{
+      width:90vw;
+      height:5vh;
+      text-align:center;
+      border:1px solid crimson;
+      background-color: crimson;
+      position:fixed;
+      top: 40vh;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      line-height:5vh;
+      color:#fff;
+  }
+  .boxBtn1{
+    width:90vw;
+    height:5vh;
+    text-align:center;
+    border:1px solid crimson;
+    background-color: crimson;
+    position:fixed;
+    top: 60vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    line-height:5vh;
+    color:#fff;
+  }

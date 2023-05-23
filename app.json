@@ -1,0 +1,22 @@
+{
+    "pages": [
+        "pages/Select_data/select_data",
+        "pages/user/user",
+        "pages/index/index",
+        "pages/map/map",
+        "pages/test/test",
+        "pages/logs/logs"
+        
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    },
+    "networkTimeout": {
+        "request": 15000,
+        "downloadFile": 15000
+    },
+    "sitemapLocation": "sitemap.json"
+}
