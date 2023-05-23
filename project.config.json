@@ -4,13 +4,20 @@
         "ignore": [],
         "include": []
     },
-    "miniprogramRoot": "miniprogram/",
-    "compileType": "miniprogram",
-    "projectname": "ts-demo",
     "setting": {
-        "useCompilerPlugins": [
-            "typescript"
-        ],
+        "urlCheck": false,
+        "es6": true,
+        "enhance": true,
+        "postcss": true,
+        "minified": true,
+        "newFeature": true,
+        "coverView": true,
+        "autoAudits": false,
+        "showShadowRootInWxmlPanel": true,
+        "scopeDataCheck": false,
+        "checkInvalidKey": true,
+        "checkSiteMap": true,
+        "uploadWithSourceMap": true,
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],
@@ -18,12 +25,13 @@
         },
         "condition": false
     },
+    "compileType": "miniprogram",
+    "libVersion": "2.10.3",
+    "appid": "wx0f2b2f29ed223acd",
+    "projectname": "smart-street-light",
     "simulatorType": "wechat",
     "simulatorPluginLibVersion": {},
     "condition": {},
-    "srcMiniprogramRoot": "miniprogram/",
-    "appid": "wx87cabb7f9811cc43",
-    "libVersion": "2.32.0",
     "editorSetting": {
         "tabIndent": "insertSpaces",
         "tabSize": 4
