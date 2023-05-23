@@ -1,6 +1,7 @@
 <view class="container">
-    <view style="display: flex;text-align: center;width: 95%;margin: 0 auto;justify-content: center;">
-        <picker mode="date" header-text="开始时间"  value="{{kssj}}" bindchange="kssjChange">
+    <form style="display: flex;text-align: center;width: 95%;margin: 0 auto;justify-content: center;">
+        <view style="display: flex;">
+            <picker mode="date" header-text="开始时间"  value="{{kssj}}" bindchange="kssjChange">
             <view class="font30">
                 <input type="text"  style="height: 65rpx;" placeholder="开始时间" class="weui-input" value="{{kssj}}"/>
             </view>
@@ -13,6 +14,8 @@
                 <input type="text" style="height: 65rpx;" placeholder="结束时间" class="weui-input" value="{{jssj}}"/>
             </view>
         </picker>
-    </view>
+        </view>
+        
+    </form>
 
 </view>
