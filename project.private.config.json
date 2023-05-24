@@ -3,5 +3,6 @@
     "projectname": "smart-street-light",
     "setting": {
         "compileHotReLoad": true
-    }
+    },
+    "libVersion": "2.32.0"
 }

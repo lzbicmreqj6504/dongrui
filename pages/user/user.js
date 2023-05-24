@@ -7,7 +7,12 @@ Page({
     },
     
     
-    jrzt (e) {
+    zkt (e) {
+        wx.navigateTo({
+          url: '../map/map?type='+e.currentTarget.dataset.index,
+        })
+    },
+    fkt (e) {
         wx.navigateTo({
           url: '../map/map?type='+e.currentTarget.dataset.index,
         })

@@ -69,13 +69,55 @@ Page({
         height: 50
       },
       clickable: true
-    }]
+    }],
+    isZkt:true,
+    box_list:[
+        {
+            name:'DCDC',
+            bjlx:'通用故障',
+            gzsj:'2023-05-24 14:06',
+            jcsj:'2023-05-24 14:06',
+            cxsj:'50分钟',
+            type:'bcblue'
+        },{
+            name:'DCDC',
+            bjlx:'通用故障',
+            gzsj:'2023-05-24 14:06',
+            jcsj:'2023-05-24 14:06',
+            cxsj:'50分钟',
+            type:'bcred'
+        },{
+            name:'DCDC',
+            bjlx:'通用故障',
+            gzsj:'2023-05-24 14:06',
+            jcsj:'2023-05-24 14:06',
+            cxsj:'50分钟',
+            type:'bcblue'
+        },{
+            name:'DCDC',
+            bjlx:'通用故障',
+            gzsj:'2023-05-24 14:06',
+            jcsj:'2023-05-24 14:06',
+            cxsj:'50分钟',
+            type:'bcred'
+        },
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+      console.log(options.type)
+      if(options.type=='zkt'){
+          this.setData({
+            isZkt:true
+          })
+      }else{
+        this.setData({
+            isZkt:false
+          })
+      }
   },
   
   /**
@@ -87,6 +129,11 @@ Page({
     // 获取组件
     this.ecComponent = this.selectComponent('#mychart-dom-map');
     this.drawChina()
+  },
+  goXq(){
+      wx.navigateTo({
+        url: '../data_list/data_list',
+      })
   },
   drawChina() {
     const defaultTip = {

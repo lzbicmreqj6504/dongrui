@@ -17,11 +17,36 @@
         </view>
         <view style="display: flex;margin-top: 30rpx;">
             <radio-group class="radio-group" bindchange="radioChange">
-                <label class="radio" wx:for="{{items}}">
-                    <view class="tui-menu-list"><radio color="#007aff" value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}</view>
+                <label class="radio" wx:for="{{items}}" wx:key="index">
+                    <view class="tui-menu-list"><radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}</view>
                 </label>
             </radio-group>
         </view>
+        <view  style="display: flex;margin-top: 30rpx;justify-content: space-between;">
+            <picker mode="region" bindchange="getUserProvince" style="width: 100%">
+                <view class="font30">
+                    <!-- <input type="text" placeholder="请选择省份"/> -->
+                   <text wx:for="{{region}}">{{item}} </text>
+                </view>
+            </picker>
+            
+        </view>
+        <view  style="display: flex;margin-top: 30rpx;justify-content: space-between;">
+            <picker bindchange="bindPickerChange"
+                style="width: 100%"
+                value="{{setIndex}}"
+                range="{{activityArr}}"
+                range-key="label">
+                    <view class="font30">
+                    {{activityArr[setIndex].label?activityArr[setIndex].label:'全部型号'}}
+                    </view>
+            </picker>
+        </view>
+        <view style="display: flex;margin-top: 30rpx;justify-content: center;">
+            <button type="primary" size="mini" plain="{{true}}" loading="{{submitLoading}}" style="width: 300rpx;" catchtap="submitSelect">立即查询</button>
+        </view>
     </form>
-
+    <view class='card'>
+        <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+    </view>
 </view>

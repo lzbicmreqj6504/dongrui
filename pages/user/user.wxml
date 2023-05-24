@@ -2,10 +2,10 @@
 <view class="container">
   <view class="mybox">
 
-    <view class="boxBtn" data-index="zkt" bindtap="jrzt">
+    <view class="boxBtn" data-index="zkt" bindtap="zkt">
       主控台
     </view>
-    <view class="boxBtn1"  data-index="fkt" bindtap="jrzt">
+    <view class="boxBtn1"  data-index="fkt" bindtap="fkt">
       分控台
     </view>
   </view>

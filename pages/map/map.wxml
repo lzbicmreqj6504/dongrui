@@ -76,8 +76,31 @@
                 </view>
         </view>
     </view>
-
-  <view class="chart-container {{showMap?'container-left':''}}">
+    <view class="list_container" wx:if="{{!isZkt}}">
+        <view style="text-align: right;" bindtap="goXq">
+            <button size="mini">查看更多</button>
+        </view>
+        <view wx:for="{{box_list}}" class="box_list {{item.type}}" >
+            <view class="list_title {{item.type=='bcblue'? 'title_blue' : 'title_red'}}">
+                {{item.name}}状态报警
+            </view>
+            <view class="list_msg">
+                <view>
+                    报警类型:{{item.bjlx}}
+                </view>
+                <view>
+                    故障时间:{{item.gzsj}}
+                </view>
+                <view>
+                    接触时间:{{item.jcsj}}
+                </view>
+                <view>
+                    持续时间:{{item.cxsj}}
+                </view>
+            </view>
+        </view>
+    </view>
+  <view class="chart-container {{showMap?'container-left':''}}" wx:if="{{isZkt}}">
     <ec-canvas wx:if="{{!isDisposed}}" id="mychart-dom-map" id="mychart-dom-map" canvas-id="mychart-map" ec="{{ ec }}"></ec-canvas>
     <cover-view style="left:{{toolTip.x}}px;top:{{toolTip.y}}px" wx:if="{{showToolTip}}" class="tool-tip">
       <cover-view>
