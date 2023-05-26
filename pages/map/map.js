@@ -303,7 +303,7 @@ Page({
         left: 'left',
         top: 'bottom',
         text: ['多', '少'], // 文本，默认为数值文本
-        calculable: true
+        calculable: true,
         // min: 800,
         // max: 50000,
         // text: ['High', 'Low'],
@@ -747,6 +747,16 @@ Page({
       provinceData = res
       callback(cityList)
     })
+  },
+  gojqlb(){
+      wx.navigateTo({
+        url: '../data_jqlist/data_jqlist',
+      })
+  },
+  xzrq(){
+      wx.navigateTo({
+        url: '../data_seldate/data_seldate',
+      })
   },
   /**
    * 生命周期函数--监听页面显示

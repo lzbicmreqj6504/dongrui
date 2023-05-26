@@ -1,0 +1,19 @@
+<view>
+  
+  <tree dataTree="{{dataTree}}" isOpenAll="false" bind:select="handleClick"></tree>
+  <view>
+    <calendar
+    calendarConfig="{{calendarConfig}}"
+    bind:onSwipe="onSwipe"
+    bind:onTapDay="onTapDay"
+    bind:afterTapDay="afterTapDay"
+    bind:whenChangeWeek="whenChangeWeek"
+    bind:whenChangeMonth="whenChangeMonth"
+    bind:afterCalendarRender="afterCalendarRender"
+  ></calendar>
+
+  </view>
+  <view>
+    <button>提交</button>
+  </view>
+</view>

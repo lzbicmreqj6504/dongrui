@@ -1,0 +1,72 @@
+<view class="container">
+    <form bindsubmit="">
+        <radio-group class="radio-group" bindchange="radioChange1">
+            机器状态：
+                <label  wx:for="{{items}}" wx:key="index" class="radio {{item.name}}">
+                    <view class="tui-menu-list"><radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}</view>
+                </label>
+        </radio-group>
+        <radio-group class="radio-group" bindchange="radioChange2">
+            管理状态：
+                <label  wx:for="{{items1}}" wx:key="index" class="radio {{item.name}}"> 
+                    <view class="tui-menu-list"><radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}</view>
+                </label>
+        </radio-group>
+    </form>
+    <view class="data_serch">
+        <view class="serch_list" bindtap="jqxq">
+            <view class="list_title">
+                <view class="title_wo">
+                    多工位冷淡机械（DRERA）
+                </view>
+                <view class="title_card">
+                    离线1天
+                </view>
+            </view>
+            <view class="list_mid">
+                <view class="mid">
+                    <view>
+                        操作人员：--
+                    </view>
+                    <view>
+                        技术人员：--
+                    </view>
+                    <view>
+                        设备型号：14112
+                    </view>
+                </view>
+            </view>
+            <view class="bot">
+                <view class="bot_view">
+                    加工产品：--
+                </view>
+                <view class="bot_view">
+                    产品规格：--
+                </view>
+                <view class="bot_view">
+                    工序名称：--
+                </view>
+                
+                <view class="bot_view">
+                    程序编号：--
+                </view>
+                <view class="bot_view">
+                    计划进度：--
+                </view>
+                <view class="bot_view">
+                    <view>
+                        当前应完成数：--
+                    </view>
+                    <view>
+                        进度正常：0
+                    </view>
+                </view>
+            </view>
+            <view class="w3-border">
+                <view class="w3-grey" style="height:40rpx;width:20%">
+                    
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

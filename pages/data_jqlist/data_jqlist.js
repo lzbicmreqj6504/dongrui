@@ -1,11 +1,37 @@
-// pages/logs/logs.js
+// pages/data_jqlist/data_jqlist.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
+        items: [
+            { name: 'yx', value: '运行' },
+            { name: 'tj', value: '停机', checked: 'true'},
+            { name: 'dk', value: '断开' },
+            { name: 'lx', value: '离线' },
+            { name: 'bj', value: '报警' },
+           
+        ],
+        items1: [
+            { name: 'sc', value: '生产' },
+            { name: 'wx', value: '维修', checked: 'true' },
+            { name: 'gz', value: '故障' },
+            { name: 'hm', value: '换模' },
+            { name: 'sm', value: '试模' },
+           
+        ],
+    },
+    radioChange1(e){
 
+    },
+    radioChange2(e){
+
+    },
+    jqxq(){
+        wx.navigateTo({
+          url: '../data_jqstate/data_jqstate',
+        })
     },
 
     /**

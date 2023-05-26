@@ -1,4 +1,4 @@
-// pages/logs/logs.js
+// pages/data_jqstate/data_jqstate.js
 Page({
 
     /**

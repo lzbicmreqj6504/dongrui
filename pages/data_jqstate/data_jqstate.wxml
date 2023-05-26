@@ -1,0 +1,140 @@
+<!--pages/data_jqstate/data_jqstate.wxml-->
+<view class="container">
+    <view class="list">
+        <view class="list_1">
+            <view class="list_1_le">
+                <image class="list_icon" src="https://owl.zjzenbo.com/images/miniwechat/jqzt/icon1.png"></image>
+                <view style="padding-left: 20rpx;">出厂编号</view>
+                
+            </view>
+            <view style="color:#9A9A9A">
+                粤111111
+            </view>
+        </view>
+        <view class="list_1">
+            <view class="list_1_le">
+                <image class="list_icon" src=""></image>
+                <view style="padding-left: 20rpx;">VIN码</view>
+                
+            </view>
+            <view style="color:#9A9A9A">
+               L666666666666666
+            </view>
+        </view>
+        <view class="list_1">
+            <view class="list_1_le">
+                <image class="list_icon" src="https://owl.zjzenbo.com/images/miniwechat/jqzt/icon2.png"></image>
+                <view style="padding-left: 20rpx;">机器型号</view>
+                
+            </view>
+            <view style="color:#9A9A9A">
+               GKL3JDJA4SKL
+            </view>
+        </view>
+        <view class="list_1">
+            <view class="list_1_le">
+                <image class="list_icon" src=""></image>
+                <view style="padding-left: 20rpx;">所属公司</view>
+                
+            </view>
+            <view style="color:#9A9A9A">
+               珠江公交_DFADAS-160台
+            </view>
+        </view>
+        <view class="list_1">
+            <view class="list_1_le">
+                <image class="list_icon" src="https://owl.zjzenbo.com/images/miniwechat/jqzt/icon3.png"></image>
+                <view style="padding-left: 20rpx;">最新位置</view>
+                
+            </view>
+            <view style="color:#9A9A9A">
+               浙江省温州市瓯海区
+            </view>
+        </view>
+        <view class="list_1">
+            <view class="list_1_le">
+                <image class="list_icon" src="https://owl.zjzenbo.com/images/miniwechat/jqzt/icon4.png"></image>
+                <view style="padding-left: 20rpx;">定位时间</view>
+                
+            </view>
+            <view style="color:#9A9A9A">
+               2023-05-29 13:13:13
+            </view>
+        </view>
+        <view class="list_1">
+            <view class="list_1_le">
+                <image class="list_icon" src="https://owl.zjzenbo.com/images/miniwechat/jqzt/icon5.png"></image>
+                <view style="padding-left: 20rpx;">在线状态</view>
+                
+            </view>
+            <view style="color:#7AC756" class="zxbt">
+               在线
+            </view>
+        </view>
+        <view class="list_1">
+            <view class="list_1_le">
+                <image class="list_icon" src="https://owl.zjzenbo.com/images/miniwechat/jqzt/icon6.png"></image>
+                <view style="padding-left: 20rpx;">启动状态</view>
+                
+            </view>
+            <view style="color:#9A9A9A" class="list_1_le">
+               <view>
+                   未启动
+               </view>
+               <image class="list_icon" src="https://owl.zjzenbo.com/images/miniwechat/jqzt/jiantou.png" mode=""/>
+            </view>
+        </view>
+        <view class="list_1">
+            <view class="list_1_le">
+                <image class="list_icon" src="https://owl.zjzenbo.com/images/miniwechat/jqzt/icon7.png"></image>
+                <view style="padding-left: 20rpx;">生产状态</view>
+                
+            </view>
+            <view style="color:#34C758" class="list_1_le">
+               <view>
+                   充电中（80%）
+               </view>
+               <image class="list_icon" src="https://owl.zjzenbo.com/images/miniwechat/jqzt/jiantou.png" mode=""/>
+            </view>
+        </view>
+        <view class="list_1">
+            <view class="list_1_le">
+                <image class="list_icon" src="https://owl.zjzenbo.com/images/miniwechat/jqzt/icon8.png"></image>
+                <view style="padding-left: 20rpx;">故障状态</view>
+                
+            </view>
+            <view style="color:#34C758" class="list_1_le">
+               <view>
+                   未故障
+               </view>
+               <image class="list_icon" src="https://owl.zjzenbo.com/images/miniwechat/jqzt/jiantou.png" mode=""/>
+            </view>
+        </view>
+        <view class="list_1">
+            <view class="list_1_le">
+                <image class="list_icon" src="https://owl.zjzenbo.com/images/miniwechat/jqzt/icon9.png"></image>
+                <view style="padding-left: 20rpx;">维护状态</view>
+                
+            </view>
+            <view style="color:#000" class="list_1_le">
+               <view>
+                   未维护
+               </view>
+               <image class="list_icon" src="https://owl.zjzenbo.com/images/miniwechat/jqzt/jqzt/jiantou.png" mode=""/>
+            </view>
+        </view>
+        <view class="list_1">
+            <view class="list_1_le">
+                <image class="list_icon" src="https://owl.zjzenbo.com/images/miniwechat/jqzt/icon10.png"></image>
+                <view style="padding-left: 20rpx;">维护状态</view>
+                
+            </view>
+            <view style="color:#000" class="list_1_le">
+               <view>
+                   未锁机
+               </view>
+               <image class="list_icon" src="https://owl.zjzenbo.com/images/miniwechat/jqzt/jiantou.png" mode=""/>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,33 +1,33 @@
 // pages/Select_data/select_data.js
-import * as echarts from '../../ec-canvas-bar/echarts';
+import * as echarts from '../../ec-canvas/echarts';
 var barChart = null;
-function initChart(canvas, width, height, dpr) {
-    const chart = echarts.init(canvas, null, {
-      width: width,
-      height: height,
-      devicePixelRatio: dpr // 像素
-    });
-    canvas.setChart(chart);
+// function initChart(canvas, width, height, dpr) {
+//     const chart = echarts.init(canvas, null, {
+//       width: width,
+//       height: height,
+//       devicePixelRatio: dpr // 像素
+//     });
+//     canvas.setChart(chart);
   
-    var option = {
-        xAxis: {
-            type: 'category',
-            data: ['型号1', '型号2', '型号3', '型号4', '型号5', '型号6', '型号7']
-          },
-          yAxis: {
-            type: 'value'
-          },
-          series: [
-            {
-              data: [120, 200, 150, 80, 70, 110, 130],
-              type: 'bar'
-            }
-          ]
+//     var option = {
+//         xAxis: {
+//             type: 'category',
+//             data: ['型号1', '型号2', '型号3', '型号4', '型号5', '型号6', '型号7']
+//           },
+//           yAxis: {
+//             type: 'value'
+//           },
+//           series: [
+//             {
+//               data: [120, 200, 150, 80, 70, 110, 130],
+//               type: 'bar'
+//             }
+//           ]
       
-    };
-    chart.setOption(option);
-    return chart;
-}
+//     };
+//     chart.setOption(option);
+//     return chart;
+// }
   
   
 Page({
@@ -37,8 +37,15 @@ Page({
      */
     data: {
         ec: {
-            onInit: initChart
-        },
+            onInit: function (canvas, width, height) {
+                 barChart = echarts.init(canvas, null, {
+                   width: width,
+                   height: height
+                 });
+                 canvas.setChart(barChart);
+                 return barChart;
+               }
+         },
       
         kssj:'',
         jssj:'',
@@ -61,8 +68,66 @@ Page({
         submitLoading:false
     },
     getData() {
-    //    this.initChart() 
-    },
+        wx.showLoading({
+          title: '加载中...',
+        });
+        let that = this;
+        wx.request({
+          url: 'https://owl.zjzenbo.com/api/banner',
+          method: 'get',
+          data: {
+            year: that.data.year
+          },
+          dataType: 'jsonp',
+          success: function (res) {
+            wx.hideLoading();
+            console.log(res);
+            var data = JSON.parse(res.data);
+            var datas = [];
+              datas = [120, 200, 150, 80, 70, 110, 130];
+              
+            var monthstr = ['型号1', '型号2', '型号3', '型号4', '型号5', '型号6', '型号7'];
+            console.log(datas);
+            barChart.setOption({
+              title: {
+                text: "",
+                left: 'center'
+              },
+              xAxis: {
+                type: 'category',
+                data: monthstr,
+                axisLabel: {
+                  interval: 0
+                }
+              },
+              yAxis: {
+                type: 'value'
+              },
+              series: [{
+                data: datas,
+                type: 'bar',
+                itemStyle: {
+                  normal: {
+                    label: {
+                      show: true,
+                      position: 'top',
+                      textStyle: {
+                        color: 'black'
+                      },
+                      formatter: '{c}'
+                    }
+                  }
+                }
+              }],
+            });
+            
+          },
+          fail: function (res) {
+            console.log("执行失败：" + res);
+          }
+        })
+     
+      },
     bindPickerChange (e) {
         console.log("e",e);
         this.setData({
@@ -109,21 +174,21 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        this.getData()
+        
     },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady() {
-
+        
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
     onShow() {
-
+        this.getData()
     },
 
     /**

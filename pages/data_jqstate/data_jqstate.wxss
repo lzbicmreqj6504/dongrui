@@ -1,0 +1,35 @@
+.container {
+    position: relative;
+    padding-bottom: 100rpx;
+}
+.list{
+    width: 90%;
+    margin: 0 auto;
+}
+.list_1{
+    width: 100%;
+    border-bottom: 1px solid #F2F2F2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rpx;
+    height: 100rpx;
+}
+.list_icon{
+    width: 60rpx;
+    height: 60rpx;
+}
+.list_1_le{
+    display: flex;
+    align-items: center;
+}
+.zxbt{
+    width: 180rpx;
+    height: 60rpx;
+    border:1px solid #7AC756;
+    background-color: #EEF8E8;
+    text-align: center;
+    line-height: 60rpx;
+    color: #7AC756;
+    /* font-size: 24rpx; */
+}

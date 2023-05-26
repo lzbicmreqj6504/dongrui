@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "控制台ZB",
+    "usingComponents": {
+      "tree": "/components/tree/tree",
+      "calendar": "/components/calendar/index"
+    }
+  }

@@ -47,6 +47,6 @@
         </view>
     </form>
     <view class='card'>
-        <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+        <ec-canvas id="mychart" force-use-old-canvas="true" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
     </view>
 </view>

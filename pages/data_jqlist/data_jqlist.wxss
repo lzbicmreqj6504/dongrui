@@ -1,0 +1,242 @@
+.container {
+    position: relative;
+    padding-bottom: 100rpx;
+}
+.radio-group{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.yx .wx-radio-input.wx-radio-input-checked::before{
+    border-radius: 50%;
+   width: 25rpx; 
+   height: 25rpx; 
+   text-align: center;
+   font-size:0rpx; /* 对勾大小 去掉 */
+   background-color: #18d77f; 
+   -webkit-transform:translate(-50%, -50%) scale(1);
+   border:1px solid #18d77f;
+
+}
+.yx .wx-radio-input{
+    border-radius: 50%;
+    width: 25rpx;
+    height: 25rpx; 
+    border: 1px solid #18d77f;/* 替换边框（隐藏原有边框） */
+ }
+ .tj .wx-radio-input.wx-radio-input-checked::before{
+    border-radius: 50%;
+   width:  25rpx; 
+   height:  25rpx; 
+   text-align: center;
+   font-size:0rpx; /* 对勾大小 去掉 */
+   background-color: #ff8559; 
+   -webkit-transform:translate(-50%, -50%) scale(1);
+   border:1px solid #ff8559;
+
+}
+.tj .wx-radio-input{
+    border-radius: 50%;
+    width:  25rpx;
+    height:  25rpx; 
+    border: 1px solid #ff8559;/* 替换边框（隐藏原有边框） */
+ }
+ .dk .wx-radio-input.wx-radio-input-checked::before{
+    border-radius: 50%;
+   width:  25rpx; 
+   height:  25rpx; 
+   text-align: center;
+   font-size:0rpx; /* 对勾大小 去掉 */
+   background-color: #999999; 
+   -webkit-transform:translate(-50%, -50%) scale(1);
+   border:1px solid #999999;
+
+}
+.dk .wx-radio-input{
+    border-radius: 50%;
+    width:  25rpx;
+    height:  25rpx; 
+    border: 1px solid #999999;/* 替换边框（隐藏原有边框） */
+ }
+
+ .lx .wx-radio-input.wx-radio-input-checked::before{
+    border-radius: 50%;
+   width:  25rpx; 
+   height:  25rpx; 
+   text-align: center;
+   font-size:0rpx; /* 对勾大小 去掉 */
+   background-color: #666666; 
+   -webkit-transform:translate(-50%, -50%) scale(1);
+   border:1px solid #666666;
+
+}
+.lx .wx-radio-input{
+    border-radius: 50%;
+    width:  25rpx;
+    height:  25rpx; 
+    border: 1px solid #666666;/* 替换边框（隐藏原有边框） */
+ }
+ .bj .wx-radio-input.wx-radio-input-checked::before{
+    border-radius: 50%;
+   width:  25rpx; 
+   height:  25rpx; 
+   text-align: center;
+   font-size:0rpx; /* 对勾大小 去掉 */
+   background-color: #e43434; 
+   -webkit-transform:translate(-50%, -50%) scale(1);
+   border:1px solid #e43434;
+
+}
+.bj .wx-radio-input{
+    border-radius: 50%;
+    width:  25rpx;
+    height:  25rpx; 
+    border: 1px solid #e43434;/* 替换边框（隐藏原有边框） */
+ }
+ .gz .wx-radio-input.wx-radio-input-checked::before{
+    border-radius: 50%;
+   width:  25rpx; 
+   height:  25rpx; 
+   text-align: center;
+   font-size:0rpx; /* 对勾大小 去掉 */
+   background-color: #f7b82d; 
+   -webkit-transform:translate(-50%, -50%) scale(1);
+   border:1px solid #f7b82d;
+
+}
+.gz .wx-radio-input{
+    border-radius: 50%;
+    width:  25rpx;
+    height:  25rpx; 
+    border: 1px solid #f7b82d;/* 替换边框（隐藏原有边框） */
+ }
+ .sc .wx-radio-input.wx-radio-input-checked::before{
+    border-radius: 50%;
+   width:  25rpx; 
+   height:  25rpx; 
+   text-align: center;
+   font-size:0rpx; /* 对勾大小 去掉 */
+   background-color: #18d77f; 
+   -webkit-transform:translate(-50%, -50%) scale(1);
+   border:1px solid #18d77f;
+
+}
+.sc .wx-radio-input{
+    border-radius: 50%;
+    width:  25rpx;
+    height:  25rpx; 
+    border: 1px solid #18d77f;/* 替换边框（隐藏原有边框） */
+ }
+ .wx .wx-radio-input.wx-radio-input-checked::before{
+    border-radius: 50%;
+   width:  25rpx; 
+   height:  25rpx; 
+   text-align: center;
+   font-size:0rpx; /* 对勾大小 去掉 */
+   background-color: #ff8559; 
+   -webkit-transform:translate(-50%, -50%) scale(1);
+   border:1px solid #ff8559;
+
+}
+.wx .wx-radio-input{
+    border-radius: 50%;
+    width:  25rpx;
+    height:  25rpx; 
+    border: 1px solid #ff8559;/* 替换边框（隐藏原有边框） */
+ }
+ .hm .wx-radio-input.wx-radio-input-checked::before{
+    border-radius: 50%;
+   width:  25rpx; 
+   height:  25rpx; 
+   text-align: center;
+   font-size:0rpx; /* 对勾大小 去掉 */
+   background-color: #999999; 
+   -webkit-transform:translate(-50%, -50%) scale(1);
+   border:1px solid #999999;
+
+}
+.hm .wx-radio-input{
+    border-radius: 50%;
+    width:  25rpx;
+    height:  25rpx; 
+    border: 1px solid #999999;/* 替换边框（隐藏原有边框） */
+ }
+ .sm .wx-radio-input.wx-radio-input-checked::before{
+    border-radius: 50%;
+   width:  25rpx; 
+   height:  25rpx; 
+   text-align: center;
+   font-size:0rpx; /* 对勾大小 去掉 */
+   background-color: #999999; 
+   -webkit-transform:translate(-50%, -50%) scale(1);
+   border:1px solid #999999;
+
+}
+.sm .wx-radio-input{
+    border-radius: 50%;
+    width:  25rpx;
+    height:  25rpx; 
+    border: 1px solid #999999;/* 替换边框（隐藏原有边框） */
+ }
+ .radio-group{
+     margin-top: 30rpx;
+ }
+ .data_serch{
+     width: 85%;
+     margin: 30rpx auto;
+     display: flex;
+     flex-direction: column;
+
+ }
+ .serch_list{
+     width: 100%;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     height: 50vh;
+     border-radius: 15rpx;
+     padding: 30rpx;
+ }
+ .title_wo{
+     width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ }
+ .list_title{
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     color:#666666;
+ }
+ .title_card{
+     width: 40%;
+     height: 50rpx;
+     text-align: center;
+     background-color: #999999;
+     border-radius: 25rpx;
+ }
+ .mid{
+     height:170rpx;
+     border-bottom: 1px solid #999999;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     color:#676869;
+ }
+ .bot{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color:#676869;
+ }
+ .bot .bot_view{
+     margin-top: 20rpx;
+     display: flex;
+     justify-content: space-between;
+ }
+ .w3-border-0{border:0!important}.w3-border{border:1px solid #ccc!important;margin-top: 20rpx;}
+.w3-border-top{border-top:1px solid #ccc!important}.w3-border-bottom{border-bottom:1px solid #ccc!important}
+.w3-border-left{border-left:1px solid #ccc!important}.w3-border-right{border-right:1px solid #ccc!important}
+.w3-grey,.w3-hover-grey:hover,.w3-gray,.w3-hover-gray:hover{color:#f7bd3d!important;background-color:#f7bd3d!important}
+

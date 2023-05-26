@@ -7,16 +7,16 @@
            <view style="color: #5756D7;">
                <text style="font-size: 44rpx;font-weight: bold;">323232</text><text>台</text>
               
-                <cover-image style="display:inline-block;padding-left: 30rpx;" class="arrow" src="/img/icon/ec_1.png"></cover-image>
+                <cover-image style="display:inline-block;padding-left: 30rpx;" class="arrow" src="https://owl.zjzenbo.com/images/miniwechat/icon/ec_1.png"></cover-image>
             
            </view>
        </view> 
        <view>
-        <cover-image style="display:inline-block;"  src="/img/icon/ec_2.png"></cover-image>
+        <cover-image style="display:inline-block;"  src="https://owl.zjzenbo.com/images/miniwechat/icon/ec_2.png"></cover-image>
        </view>
     </view>
     <view class="conBox" style="text-align: center;">
-        <view style="display: flex;flex-direction: column;justify-content: space-around;border-right: 1px solid #ccc;height: 130rpx;position: relative;padding-right: 30rpx;">
+        <view style="display: flex;flex-direction: column;justify-content: space-around;border-right: 1px solid #ccc;height: 130rpx;position: relative;padding-right: 30rpx;" catchtap="gojqlb">
             
             <checkbox value="v1" checked class="cb"  style="position: absolute;right: 0rpx;top: -6rpx;"/>
       
@@ -61,7 +61,7 @@
                         报警台数
                     </view>
                     <view style="color: #FF3A30;display: flex;height: 100rpx;line-height: 100rpx;">
-                        <cover-image style="display:inline-block; width: 60rpx;height: 60rpx;margin-top: 20rpx;"  src="/img/icon/ec_3.png"></cover-image><text style="font-size: 44rpx;font-weight: bold;">323232</text><text>台</text>
+                        <cover-image style="display:inline-block; width: 60rpx;height: 60rpx;margin-top: 20rpx;"  src="https://owl.zjzenbo.com/images/miniwechat/icon/ec_3.png"></cover-image><text style="font-size: 44rpx;font-weight: bold;">323232</text><text>台</text>
                     </view>
                 </view>
         </view>
@@ -71,14 +71,15 @@
                         报警次数
                     </view>
                     <view style="color: #FF9502;display: flex;height: 100rpx;line-height: 100rpx;">
-                        <cover-image style="display:inline-block; width: 60rpx;height: 60rpx;margin-top: 20rpx;"  src="/img/icon/ec_4.png"></cover-image><text style="font-size: 44rpx;font-weight: bold;">323232</text><text>次</text>
+                        <cover-image style="display:inline-block; width: 60rpx;height: 60rpx;margin-top: 20rpx;"  src="https://owl.zjzenbo.com/images/miniwechat/icon/ec_4.png"></cover-image><text style="font-size: 44rpx;font-weight: bold;">323232</text><text>次</text>
                     </view>
                 </view>
         </view>
     </view>
     <view class="list_container" wx:if="{{!isZkt}}">
-        <view style="text-align: right;" bindtap="goXq">
-            <button size="mini">查看更多</button>
+        <view style="display: flex;justify-content: space-between;">
+            <button size="mini" bindtap="xzrq">选择日期</button>
+            <button size="mini"  bindtap="goXq">查看更多</button>
         </view>
         <view wx:for="{{box_list}}" class="box_list {{item.type}}" >
             <view class="list_title {{item.type=='bcblue'? 'title_blue' : 'title_red'}}">
@@ -100,7 +101,7 @@
             </view>
         </view>
     </view>
-  <view class="chart-container {{showMap?'container-left':''}}" wx:if="{{isZkt}}">
+  <view class="chart-container {{showMap?'container-left':''}}" wx:show="{{isZkt}}">
     <ec-canvas wx:if="{{!isDisposed}}" id="mychart-dom-map" id="mychart-dom-map" canvas-id="mychart-map" ec="{{ ec }}"></ec-canvas>
     <cover-view style="left:{{toolTip.x}}px;top:{{toolTip.y}}px" wx:if="{{showToolTip}}" class="tool-tip">
       <cover-view>
@@ -112,7 +113,7 @@
       </cover-view>
       <cover-view class="tool-detail" bindtap="checkoutDetail">
         <cover-view>查看详情</cover-view>
-        <cover-image class="arrow" src="/img/icon/arrow.png"></cover-image>
+        <cover-image class="arrow" src="https://owl.zjzenbo.com/images/miniwechat/icon/arrow.png"></cover-image>
       </cover-view>
     </cover-view>
     <cover-view class="tool-back" wx:if="{{showBack}}">
