@@ -19,6 +19,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    dormList: [
+ 
+        
+    ],
     ec: {
       // 将 lazyLoad 设为 true 后，需要手动初始化图表
       lazyLoad: true
@@ -103,7 +107,32 @@ Page({
         },
     ]
   },
-
+  getImg(){
+    let that = this
+    wx.request({
+        url:'https://owl.zjzenbo.com/api/banner', //必填，其他的都可以不填
+        
+        header:{  
+           'content-type':'application/json'
+        },
+        method:'GET',  
+        dataType:'JSON',  
+        responseType:'text', 
+        success(res){
+            console.log(res);
+            let data  = JSON.parse(res.data)
+            that.setData({
+                dormList:data
+            })
+        },
+        fail(){  
+            console.log('fail')
+        },
+        complete(){   
+             console.log('complete')   
+        }
+    }  )  
+},
   /**
    * 生命周期函数--监听页面加载
    */
@@ -115,7 +144,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-    
+    this.getImg()
     
   },
   goXq(){

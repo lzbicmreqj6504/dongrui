@@ -1,4 +1,19 @@
 <view class="container">
+    <view style="width:90% ;height:300rpx;margin:20rpx auto">
+<swiper  indicator-dots>
+  <block >
+    <swiper-item class="switem" item-id=""  wx:for="{{dormList}}"  wx:key="swiperItem">
+     
+          <image class="" src="{{item}}"  lazy-load="false" binderror="" bindload=""/>
+        
+    </swiper-item>
+  </block>
+</swiper>
+
+
+
+
+    </view>
     <view class="conBox" style="background: #FFFBFB;"> 
        <view>
            <view style="padding-bottom: 30rpx;color: #333;">

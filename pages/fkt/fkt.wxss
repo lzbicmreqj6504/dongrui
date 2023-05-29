@@ -147,3 +147,7 @@
       background-color: #FFF1F0;
       border:1rpx solid #FFA39E;
     }
+    .switem image{
+        width: 100%;
+        height: 300rpx;
+    }
