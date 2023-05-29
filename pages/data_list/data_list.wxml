@@ -18,7 +18,7 @@
         <view  style="display: flex;margin-top: 30rpx;justify-content: space-between;">
         <view>
             解除状态
-            <switch size="mini" checked="{{switch1Checked}}" bindchange="switch1Change" />
+            <switch size="mini" checked="{{switch1Checked}}" bindchange="switch1Change" color="#3894FF"/>
         </view>
            
             <picker bindchange="bindPickerChange"
@@ -33,7 +33,7 @@
         </view>
       
         <view style="display: flex;margin-top: 30rpx;justify-content: center;">
-            <button type="primary" size="mini" plain="{{true}}" loading="{{submitLoading}}" style="width: 300rpx;" catchtap="submitSelect"><icon class="icon-small" type="search" size="10"></icon>搜索</button>
+            <button type="primary" class="search" size="mini" plain="{{true}}" loading="{{submitLoading}}" style="width: 300rpx;" catchtap="submitSelect"><icon color="#3894FF" class="icon-small" type="search" size="10" ></icon>搜索</button>
         </view>
     
     </form>

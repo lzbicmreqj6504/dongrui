@@ -110,3 +110,7 @@
 
 
 }
+.search{
+    border:1px solid #3894FF!important;
+    color:#3894FF!important;
+}

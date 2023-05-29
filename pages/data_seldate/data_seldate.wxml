@@ -4,16 +4,18 @@
   <view>
     <calendar
     calendarConfig="{{calendarConfig}}"
-    bind:onSwipe="onSwipe"
+    bind:onSwipe="onSwipe" 
     bind:onTapDay="onTapDay"
     bind:afterTapDay="afterTapDay"
     bind:whenChangeWeek="whenChangeWeek"
     bind:whenChangeMonth="whenChangeMonth"
     bind:afterCalendarRender="afterCalendarRender"
+    bind:takeoverTap="takeoverTap"
+    id="calendar"
   ></calendar>
 
   </view>
   <view>
-    <button>提交</button>
+    <button class="submitBtn" bindtap="dateSub">提交</button>
   </view>
 </view>

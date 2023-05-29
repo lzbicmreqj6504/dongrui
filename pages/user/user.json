@@ -1,4 +1,4 @@
 {
     "usingComponents": {},
-    "navigationBarTitleText": "控制台"
+    "navigationStyle":"custom"
 }

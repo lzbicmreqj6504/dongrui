@@ -1,16 +1,26 @@
 <view class="container">
     <form bindsubmit="">
-        <radio-group class="radio-group" bindchange="radioChange1">
+        <radio-group bindchange="radioChange1" class="radioBox">
+        <view class="radiobox_title">
             机器状态：
-                <label  wx:for="{{items}}" wx:key="index" class="radio {{item.name}}">
+        </view>
+        <view  class="radio-group" >
+            <label  wx:for="{{items}}" wx:key="index" class="radio {{item.name}}">
                     <view class="tui-menu-list"><radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}</view>
                 </label>
+        </view>
+                
         </radio-group>
-        <radio-group class="radio-group" bindchange="radioChange2">
-            管理状态：
-                <label  wx:for="{{items1}}" wx:key="index" class="radio {{item.name}}"> 
+        <radio-group bindchange="radioChange2" class="radioBox">
+        <view class="radiobox_title">
+            机器状态：
+        </view>
+        <view  class="radio-group" >
+            <label  wx:for="{{items1}}" wx:key="index" class="radio {{item.name}}">
                     <view class="tui-menu-list"><radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}</view>
                 </label>
+        </view>
+                
         </radio-group>
     </form>
     <view class="data_serch">

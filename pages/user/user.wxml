@@ -5,7 +5,7 @@
         autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="sw">
         <block wx:for="{{background}}" wx:key="*this">
           <swiper-item>
-            <view class="swiper-item {{item}}" style="background: url({{item}})100% 100% no-repeat;">
+            <view class="swiper-item {{item}}" style="background: url({{item}})no-repeat;background-attachment:fixed;">
                 
             </view>
           </swiper-item>

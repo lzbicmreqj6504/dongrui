@@ -128,7 +128,10 @@ Page({
     this.provinceTool = this.data.toolTip
     // 获取组件
     this.ecComponent = this.selectComponent('#mychart-dom-map');
-    this.drawChina()
+    if(this.data.isZkt){
+        this.drawChina()
+    }
+    
   },
   goXq(){
       wx.navigateTo({
@@ -247,7 +250,7 @@ Page({
         map: "china",
         roam: false, // 可以缩放和平移
         aspectScale: 0.8, // 比例
-        layoutCenter: ["50%", "50%"], // position位置
+        layoutCenter: ["50%", "30%"], // position位置
         layoutSize: 370, // 地图大小，保证了不超过 370x370 的区域
         label: {
           // 图形上的文本标签
@@ -301,7 +304,7 @@ Page({
         min: 0,
         max: 2000,
         left: 'left',
-        top: 'bottom',
+        top: '40%',
         text: ['多', '少'], // 文本，默认为数值文本
         calculable: true,
         // min: 800,
@@ -749,11 +752,13 @@ Page({
     })
   },
   gojqlb(){
+    console.log('gojqlb')
       wx.navigateTo({
         url: '../data_jqlist/data_jqlist',
       })
   },
   xzrq(){
+      console.log('xzrq')
       wx.navigateTo({
         url: '../data_seldate/data_seldate',
       })
