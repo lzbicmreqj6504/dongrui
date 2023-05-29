@@ -2,7 +2,7 @@ Page({
     data: {
         Message:null,
         background: [],
-        indicatorDots: false,
+        indicatorDots: true,
         vertical: false,
         autoplay: true,
         interval: 2000,

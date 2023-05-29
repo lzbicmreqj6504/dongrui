@@ -6,12 +6,16 @@
   }
   .sw{
       width: 100%;
-      height: 100vh;
+      height: 75vh;
   }
   .swiper-item{
     width: 100%;
-    height: 100vh;
-    background-size: 100% 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+        
   }
 
   .mybox{
@@ -26,29 +30,52 @@
       width:90vw;
       height:5vh;
       text-align:center;
-      border:1px solid crimson;
-      background-color: crimson;
+      border:1px solid #3894FF;
+      background-color: #3894FF;
       position:fixed;
-      top: 40vh;
       left: 0;
       right: 0;
-      bottom: 0;
+      bottom: 16vh;
       margin: auto;
       line-height:5vh;
       color:#fff;
+      border-radius: 15rpx;
   }
   .boxBtn1{
+    border-radius: 15rpx;
     width:90vw;
     height:5vh;
     text-align:center;
-    border:1px solid crimson;
-    background-color: crimson;
+    border:1px solid #3894FF;
+    background-color: #3894FF;
     position:fixed;
-    top: 60vh;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 8vh;
     margin: auto;
     line-height:5vh;
     color:#fff;
   }
+  .wx-swiper-dot {
+    width: 45rpx!important;
+    height: 8rpx!important;
+    border-radius: 5rpx!important;
+    
+  }
+    .wx-swiper-dots.wx-swiper-dots-horizontal {
+    position: absolute!important;
+    bottom: 40rpx!important;
+
+  }
+  .drjx{
+      line-height: 75vh;
+      text-align: center;
+      color:#fff;
+      font-size: 80rpx;
+  }
+
+    .wx-swiper-dot-active {
+    background-color:#3894FF!important;
+  }
+  
+  

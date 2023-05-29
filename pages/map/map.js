@@ -108,16 +108,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-      console.log(options.type)
-      if(options.type=='zkt'){
-          this.setData({
-            isZkt:true
-          })
-      }else{
-        this.setData({
-            isZkt:false
-          })
-      }
+     
   },
   
   /**
@@ -597,7 +588,7 @@ Page({
         roam: false, // 可以缩放和平移
         aspectScale: 0.8, // 比例
         layoutCenter: ["50%", "50%"], // position位置
-        layoutSize: 350, // 地图大小，保证了不超过 370x370 的区域
+        layoutSize: 370, // 地图大小，保证了不超过 370x370 的区域
         label: {
           // 图形上的文本标签
           normal: {

@@ -5,7 +5,7 @@
 .default_weekend-color,
 .default_handle-color,
 .default_week-color {
-    color: #0052D9;
+    color: #3894FF;
 }
 
 .default_today {
@@ -15,7 +15,7 @@
 
 .default_choosed {
     color: #fff;
-    background-color: #0052D9;
+    background-color: #3894FF;
 }
 
 .default_date-disable {

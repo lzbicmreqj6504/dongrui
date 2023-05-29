@@ -17,7 +17,7 @@
         </view>
         <view style="display: flex;margin-top: 30rpx;">
             <radio-group class="radio-group" bindchange="radioChange">
-                <label class="radio" wx:for="{{items}}" wx:key="index">
+                <label class="radio ra" wx:for="{{items}}" wx:key="index">
                     <view class="tui-menu-list"><radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}</view>
                 </label>
             </radio-group>
@@ -43,7 +43,7 @@
             </picker>
         </view>
         <view style="display: flex;margin-top: 30rpx;justify-content: center;">
-            <button type="primary" size="mini" plain="{{true}}" loading="{{submitLoading}}" style="width: 300rpx;" catchtap="submitSelect">立即查询</button>
+            <button type="primary" size="mini" plain="{{true}}" loading="{{submitLoading}}" style="width: 300rpx;" catchtap="submitSelect" class="ljcx">立即查询</button>
         </view>
     </form>
     <view class='card'>

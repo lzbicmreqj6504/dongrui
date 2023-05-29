@@ -55,3 +55,23 @@
       width: 100%;
       height: 40vh;
   }
+  .ljcx{
+      border:1px solid #3894FF!important;
+      color:#3894FF!important;
+  }
+ .ra .wx-radio-input.wx-radio-input-checked::before{
+    border-radius: 50%;
+   width:  35rpx; 
+   height:  35rpx; 
+   text-align: center;
+   font-size:0rpx; /* 对勾大小 去掉 */
+   background-color: #3894FF; 
+   -webkit-transform:translate(-50%, -50%) scale(1);
+   border:1px solid #3894FF;
+  }
+.ra .wx-radio-input{
+    border-radius: 50%;
+    width: 35rpx;
+    height: 35rpx; 
+    border: 1px solid #3894FF;/* 替换边框（隐藏原有边框） */
+ }

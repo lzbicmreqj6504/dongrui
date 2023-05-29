@@ -5,8 +5,13 @@
         autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="sw">
         <block wx:for="{{background}}" wx:key="*this">
           <swiper-item>
-            <view class="swiper-item {{item}}" style="background: url({{item}})no-repeat 100% 100%;background-attachment:fixed;">
-                
+            <view class="swiper-item {{item}}" style="background: url({{item}})no-repeat;">
+                <!-- <view class="drjx">
+                    东瑞机械
+                </view>
+                <view>
+                    
+                </view> -->
             </view>
           </swiper-item>
         </block>

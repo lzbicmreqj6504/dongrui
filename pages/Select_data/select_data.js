@@ -108,11 +108,12 @@ Page({
                 type: 'bar',
                 itemStyle: {
                   normal: {
+                    color:'#3894FF',
                     label: {
                       show: true,
                       position: 'top',
                       textStyle: {
-                        color: 'black'
+                        color: '#3894FF'
                       },
                       formatter: '{c}'
                     }
