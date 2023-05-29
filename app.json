@@ -3,15 +3,14 @@
         "pages/user/user",
         "pages/data_seldate/data_seldate",
         "pages/data_jqlist/data_jqlist",
-        
         "pages/Select_data/select_data",
         "pages/index/index",
         "pages/map/map",
         "pages/test/test",
         "pages/logs/logs",
         "pages/data_list/data_list",
-        "pages/data_jqstate/data_jqstate"
-        
+        "pages/data_jqstate/data_jqstate",
+        "pages/fkt/fkt"
     ],
     "window": {
         "backgroundTextStyle": "light",

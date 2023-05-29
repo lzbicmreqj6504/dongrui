@@ -15,12 +15,12 @@ Page({
     
     zkt (e) {
         wx.navigateTo({
-          url: '../map/map?type='+e.currentTarget.dataset.index,
+          url: '../map/map',
         })
     },
     fkt (e) {
         wx.navigateTo({
-          url: '../map/map?type='+e.currentTarget.dataset.index,
+          url: '../fkt/fkt',
         })
     },
     getImg(){

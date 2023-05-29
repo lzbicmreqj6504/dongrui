@@ -76,28 +76,32 @@
                 </view>
         </view>
     </view>
-    
-  <view class="chart-container {{showMap?'container-left':''}}">
-    <ec-canvas wx:if="{{!isDisposed}}" id="mychart-dom-map" id="mychart-dom-map" canvas-id="mychart-map" ec="{{ ec }}"></ec-canvas>
-    <cover-view style="left:{{toolTip.x}}px;top:{{toolTip.y}}px" wx:if="{{showToolTip}}" class="tool-tip">
-      <cover-view>
-        <cover-view>{{toolTip.name}}</cover-view>
-        <cover-view>设备数：{{toolTip.value}}</cover-view>
-        <cover-view>运行中：{{toolTip.value2}}</cover-view>
-        <cover-view>故障：{{toolTip.value3}}</cover-view>
-        <cover-view class="nofont"></cover-view>
-      </cover-view>
-      <cover-view class="tool-detail" bindtap="checkoutDetail">
-        <cover-view>查看详情</cover-view>
-        <cover-image class="arrow" src="https://owl.zjzenbo.com/images/miniwechat/icon/arrow.png"></cover-image>
-      </cover-view>
-    </cover-view>
-    <cover-view class="tool-back" wx:if="{{showBack}}">
-      <button bindtap="drawChina">返回</button>
-    </cover-view>
-  </view>
-  <view class="map-view" wx:if="{{showMap}}">
-    <map id="map" longitude="{{centerPoint.longitude}}" latitude="{{centerPoint.latitude}}" scale="11" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>
-    <button bindtap="backChart">返回</button>
-  </view>
+    <view class="list_container">
+        <view style="display: flex;justify-content: space-between;z-index: 9999;">
+            <!-- <navigator url="../data_seldate/data_seldate">选择日期</navigator>
+            <navigator url="../data_seldate/data_seldate">查看更多</navigator> -->
+            <button size="mini" catchtap="xzrq">选择日期</button>
+            <button size="mini"  catchtap="goXq">查看更多</button>
+        </view>
+        <view wx:for="{{box_list}}" class="box_list {{item.type}}" wx:key="index" catchtap="xzrq" >
+            <view class="list_title {{item.type=='bcblue'? 'title_blue' : 'title_red'}}">
+                {{item.name}}状态报警
+            </view>
+            <view class="list_msg">
+                <view>
+                    报警类型:{{item.bjlx}}
+                </view>
+                <view>
+                    故障时间:{{item.gzsj}}
+                </view>
+                <view>
+                    接触时间:{{item.jcsj}}
+                </view>
+                <view>
+                    持续时间:{{item.cxsj}}
+                </view>
+            </view>
+        </view>
+    </view>
+  
 </view>

@@ -4,7 +4,7 @@
   padding-bottom: 100rpx;
 }
 .chart-container {
-  width: 100%;
+  width: 95%;
   height: 70vh;
   position: relative;
 }
@@ -72,7 +72,7 @@ page {
     margin-top: 200px;
   }
   .conBox{
-      width: 95%;
+      width:90%;
       margin: 20rpx auto;
       height: 200rpx;
       border-radius: 15rpx;
@@ -92,7 +92,7 @@ page {
       transform: scale(0.6,0.6);
   }
   .conBox1{
-      width: 95%;
+      width: 90%;
       margin: 20rpx auto;
       height: 200rpx;
       border-radius: 15rpx;
@@ -107,7 +107,7 @@ page {
       border-radius: 15rpx;
   }
   .list_container{
-      width: 95%;
+      width:90%;
       margin: 30rpx auto;
   }
   .box_list{
