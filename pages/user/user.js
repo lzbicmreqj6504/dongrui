@@ -19,7 +19,7 @@ Page({
         })
     },
     fkt (e) {
-        wx.navigateTo({
+        wx.switchTab({
           url: '../fkt/fkt',
         })
     },

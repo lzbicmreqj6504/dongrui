@@ -20,7 +20,7 @@
                设备总数
            </view>
            <view style="color: #5756D7;">
-               <text style="font-size: 50rpx;font-weight: bold;">323232</text><text>台</text>
+               <text style="font-size: 50rpx;font-weight: bold;">958</text><text>台</text>
               
                 <cover-image style="display:inline-block;padding-left: 30rpx;" class="arrow" src="https://owl.zjzenbo.com/images/miniwechat/icon/ec_1.png"></cover-image>
             
@@ -36,7 +36,7 @@
             <checkbox value="v1" checked class="cb"  style="position: absolute;right: 0rpx;top: -6rpx;"/>
       
             <view style="color: #007AFF;padding:20rpx">
-                <text style="font-size: 38rpx;font-weight: bold;">3232</text><text>台</text>
+                <text style="font-size: 38rpx;font-weight: bold;">412</text><text>台</text>
             </view>
             <view style="color: #ccc;text-align: center;">
                在线数
@@ -48,7 +48,7 @@
             <checkbox value="v1" checked class="cb"  style="position: absolute;right: 0rpx;top: -6rpx;"/>
       
             <view style="color: #05AEE6;padding:20rpx">
-                <text style="font-size: 38rpx;font-weight: bold;">3232</text><text>台</text>
+                <text style="font-size: 38rpx;font-weight: bold;">318</text><text>台</text>
             </view>
             <view style="color: #ccc;text-align: center;">
                离线数
@@ -60,7 +60,7 @@
             <!-- <checkbox value="v1" checked class="cb"  style="position: absolute;right: 0rpx;top: -6rpx;"/> -->
       
             <view style="color: #34C758;padding:20rpx">
-                <text style="font-size: 38rpx;font-weight: bold;">3232</text><text>台</text>
+                <text style="font-size: 38rpx;font-weight: bold;">228</text><text>台</text>
             </view>
             <view style="color: #ccc;text-align: center;">
                故障设备数
@@ -76,7 +76,7 @@
                         报警台数
                     </view>
                     <view style="color: #FF3A30;display: flex;height: 100rpx;line-height: 100rpx;">
-                        <cover-image style="display:inline-block; width: 60rpx;height: 60rpx;margin-top: 20rpx;"  src="https://owl.zjzenbo.com/images/miniwechat/icon/ec_3.png"></cover-image><text style="font-size: 44rpx;font-weight: bold;">323232</text><text>台</text>
+                        <cover-image style="display:inline-block; width: 60rpx;height: 60rpx;margin-top: 20rpx;"  src="https://owl.zjzenbo.com/images/miniwechat/icon/ec_3.png"></cover-image><text style="font-size: 44rpx;font-weight: bold;">323</text><text>台</text>
                     </view>
                 </view>
         </view>
@@ -86,7 +86,7 @@
                         报警次数
                     </view>
                     <view style="color: #FF9502;display: flex;height: 100rpx;line-height: 100rpx;">
-                        <cover-image style="display:inline-block; width: 60rpx;height: 60rpx;margin-top: 20rpx;"  src="https://owl.zjzenbo.com/images/miniwechat/icon/ec_4.png"></cover-image><text style="font-size: 44rpx;font-weight: bold;">323232</text><text>次</text>
+                        <cover-image style="display:inline-block; width: 60rpx;height: 60rpx;margin-top: 20rpx;"  src="https://owl.zjzenbo.com/images/miniwechat/icon/ec_4.png"></cover-image><text style="font-size: 44rpx;font-weight: bold;">20</text><text>次</text>
                     </view>
                 </view>
         </view>

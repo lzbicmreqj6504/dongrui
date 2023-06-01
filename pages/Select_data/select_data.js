@@ -166,9 +166,11 @@ Page({
         })
     },
     submitSelect:function(){
-        this.setData({
-            submitLoading:true
-        })
+        
+        // this.setData({
+        //     submitLoading:true
+        // })
+        this.getData()
     },
 
     /**

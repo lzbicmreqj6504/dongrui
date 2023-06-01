@@ -534,7 +534,9 @@ Page({
         x: e.event.offsetX,
         y: e.event.offsetY,
         name: e.data.name,
-        value: e.data.value
+        value: e.data.value,
+        value2:e.data.value2,
+        value3:e.data.value3
       }
       this.setData({
         toolTip
@@ -546,7 +548,9 @@ Page({
         x: e.event.offsetX,
         y: e.event.offsetY,
         name: e.data.name,
-        value: e.data.value
+        value: e.data.value,
+        value2:e.data.value2,
+        value3:e.data.value3
       }
       this.setData({
         toolTip
@@ -734,6 +738,8 @@ Page({
         cityList[cityList.length] = {
           name: item.properties.name,
           value: randomData(),
+          value2: randomData(),
+          value3: randomData(),
           id: item.id,
           cp: item.properties.cp
         }
