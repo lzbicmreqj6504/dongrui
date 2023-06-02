@@ -730,7 +730,7 @@ Page({
     })
   },
   getProvinceData (provinceName, callback = function () {}) {
-    const url = `http://map.zjzenbo.com/map/json/province/${provinceName}.json`
+    const url = `https://map.zjzenbo.com/map/json/province/${provinceName}.json`
     app.request('get', url).then(res => {
       console.log(res)
       cityList = []
