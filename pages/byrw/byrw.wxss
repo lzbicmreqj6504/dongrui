@@ -103,11 +103,10 @@
 .title_rig{
     /* height: 40rpx; */
     position: absolute;
-    background-color: #3894FF;
-    color: #fff;
+
     padding:10rpx;
     right: 30rpx;
-    top: 10rpx;
+    top: -1rpx;
 
 
 }

@@ -1,5 +1,5 @@
 <view class="container">
-    <form bindsubmit="">
+    <view bindsubmit="" style="width:100%" class="vw">
         <radio-group bindchange="radioChange1" class="radioBox">
         <view class="radiobox_title">
             机器状态：
@@ -22,7 +22,7 @@
         </view>
                 
         </radio-group>
-    </form>
+    </view>
     <view class="data_serch">
         <view class="serch_list" bindtap="jqxq">
             <view class="list_title">

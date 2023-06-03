@@ -1,0 +1,66 @@
+<view class="container">
+    <view class="cu-form-group margin-top">
+		<view class="title">选择设备</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+				{{index?picker[index]:'请选择设备'}}
+			</view>
+		</picker>
+	</view>
+    <view class="cu-form-group margin-top">
+		<view class="title">保养项目</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+				{{index?picker[index]:'请选择项目'}}
+			</view>
+		</picker>
+	</view>
+    <view class="cu-list menu-avatar">
+    <view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{4}}" wx:key bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
+      <!-- <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big2100{{index+1}}.jpg);"></view> -->
+      <view class="content" style="left: 30rpx;">
+        <view class="text-grey">任务名称：任务名称任务名</view>
+        <view class="text-gray text-sm">备注：备注备注备注备注备注备注备注</view>
+      </view>
+      <!-- <view class="action">
+        <view class="text-grey text-xs">22:20</view>
+        <view class="cu-tag round bg-grey sm">5</view>
+      </view> -->
+      <view class="move">
+        <view class="bg-green">提交</view>
+        <view class="bg-red">删除</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-form-group align-start">
+		<view class="title">保养结果</view>
+		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaBInput" placeholder="设备没啥问题，继续保养"></textarea>
+	</view>
+  <view class="cu-bar bg-white margin-top">
+		<view class="action">
+			图片上传
+		</view>
+		<view class="action">
+			{{imgList.length}}/4
+		</view>
+	</view>
+    
+	<view class="cu-form-group">
+		<view class="grid col-4 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+				<image src='{{imgList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+				<text class="cuIcon-cameraadd"></text>
+			</view>
+		</view>
+	</view>
+   
+    <view class="btn_box">
+        <button size="mini" class="cu-btn bg-grey">重置</button>
+        <button size="mini" class="cu-btn bg-green">完成保养</button>
+    </view>
+</view>

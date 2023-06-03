@@ -11,7 +11,16 @@
         "pages/data_list/data_list",
         "pages/data_jqstate/data_jqstate",
         "pages/fkt/fkt",
-        "pages/fktRw/fktRw"
+        "pages/fktRw/fktRw",
+        "pages/djrw/djrw",
+        "pages/byrw/byrw",
+        "pages/wxrw/wxrw",
+        "pages/scrw/scrw",
+        "pages/fqdjrw/fqdjrw",
+        "pages/xmby/xmby",
+        "pages/fqwx/fqwx",
+        "pages/fqsc/fqsc",
+        "pages/ztsc/ztsc"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -30,20 +39,20 @@
         "borderStyle": "black",
         "backgroundColor": "#ffffff",
         "list": [
-          {
-            "pagePath": "pages/fkt/fkt",
-            "iconPath": "image/sy1.png",
-            "selectedIconPath": "image/sy2.png",
-            "text": "首页"
-          },
-          {
-            "pagePath": "pages/fktRw/fktRw",
-            "iconPath": "image/rw1.png",
-            "selectedIconPath": "image/rw2.png",
-            "text": "任务"
-          }
+            {
+                "pagePath": "pages/fkt/fkt",
+                "iconPath": "image/sy1.png",
+                "selectedIconPath": "image/sy2.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/fktRw/fktRw",
+                "iconPath": "image/rw1.png",
+                "selectedIconPath": "image/rw2.png",
+                "text": "任务"
+            }
         ]
-      },
+    },
     "sitemapLocation": "sitemap.json",
     "requiredComponents": "requireComponents",
     "lazyCodeLoading": "requiredComponents"

@@ -1,0 +1,71 @@
+<view class="container">
+    <form style="display: flex;text-align: center;width: 95%;margin: 0 auto;justify-content: center;">
+        <view style="display: flex;">
+            <picker mode="date" header-text="开始时间"  value="{{kssj}}" bindchange="kssjChange">
+                <view class="font30">
+                    <input type="text"  style="height: 65rpx;" placeholder="开始时间" class="weui-input" value="{{kssj}}"/>
+                </view>
+            </picker>
+            <view  class="font31">
+                至
+            </view>
+            <picker mode="date" header-text="结束时间"  value="{{jssj}}" bindchange="jssjChange">
+                <view class="font30">
+                    <input type="text" style="height: 65rpx;" placeholder="结束时间" class="weui-input" value="{{jssj}}"/>
+                </view>
+            </picker>
+        </view>
+        <view  style="display: flex;margin-top: 30rpx;justify-content: space-between;">
+        <view>
+            生产完成
+            <switch size="mini" checked="{{switch1Checked}}" bindchange="switch1Change" color="#3894FF"/>
+        </view>
+           
+            <!-- <picker bindchange="bindPickerChange"
+                style="width: 400rpx"
+                value="{{setIndex}}"
+                range="{{activityArr}}"
+                range-key="label">
+                    <view class="font30">
+                    {{activityArr[setIndex].label?activityArr[setIndex].label:' 报警类型'}}
+                    </view>
+            </picker> -->
+        </view>
+      
+        <view style="display: flex;margin-top: 30rpx;justify-content: center;">
+            <button type="primary" class="search" size="mini" plain="{{true}}" loading="{{submitLoading}}" style="width: 300rpx;" catchtap="submitSelect"><icon color="#3894FF" class="icon-small" type="search" size="10" ></icon>搜索</button>
+        </view>
+    
+    </form>
+    <view class="list_container">
+        <view wx:for="{{box_list}}" class="box_list {{item.type}}" >
+            <view class="list_title {{item.type=='bcblue'? 'title_blue' : 'title_red'}}" style="display: flex;justify-content: space-between;">
+                <view style="line-height: 60rpx;">
+                    生产状态 {{item.name}}
+                </view>
+                <view class='title_rig' bindtap="kssc">
+                    <button class="cu-btn bg-blue">开始生产</button>
+                    
+                </view>
+                <view class='title_rig' bindtap="ztsc">
+                    <button class="cu-btn bg-blue">暂停生产</button>
+                    
+                </view>
+            </view>
+            <view class="list_msg">
+                <view>
+                    机器名称:{{item.name}}
+                </view>
+                <view>
+                    生产时间:{{item.gzsj}}
+                </view>
+                <view>
+                    检查时间:{{item.jcsj}}
+                </view>
+                <view>
+                    持续时间:{{item.cxsj}}
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

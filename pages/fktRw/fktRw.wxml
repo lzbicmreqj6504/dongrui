@@ -1,2 +1,98 @@
-<!--pages/fktRw/fktRw.wxml-->
-<text>pages/fktRw/fktRw.wxml</text>
+<view class="container">
+    <view class="bj">
+        <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="sw">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item {{item}}" style="background: url({{item}})no-repeat,linear-gradient(90deg,#10ad89 0%, #1ca4be 100%);">
+                
+                
+            </view>
+          </swiper-item>
+        </block>
+    </swiper>
+    <view class='nav-list' style="margin-top: 20rpx;">
+    <navigator open-type="navigate" hover-class='none' url="/pages/{{item.nav}}/{{item.nav}}" class="nav-li bg-{{item.color}}" wx:for="{{elements}}" wx:key>
+      <view class="nav-title">{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+      <text class='cuIcon-{{item.icon}}'></text>
+    </navigator>
+  </view>
+    <!-- <view class="data_i">
+        
+    </view> -->
+        <!-- <view class="drjx3">
+            浙江东瑞机械工业有限公司
+        </view>
+        <view class="drjx">
+            <form bindsubmit="ddjrw" report-submit="true">                
+                <view class="iconBtn" form-type="submit">
+                    <view class="remind-num">
+                        12
+                    </view>
+                    <image class="icon-img" src="https://owl.zjzenbo.com/images/miniwechat/icon/ec_3.png">
+                    </image>
+                    <view class="icon-text-view">待点检任务</view>
+                </view>
+           </form>
+           <form bindsubmit="ddjrw" report-submit="true">                
+                <view class="iconBtn" form-type="submit">
+                    <view class="remind-num">
+                        12
+                    </view>
+                    <image class="icon-img" src="https://owl.zjzenbo.com/images/miniwechat/icon/ec_4.png">
+                    </image>
+                    <view class="icon-text-view">保养任务</view>
+                </view>
+           </form>
+        </view>
+        <view class="drjx1">
+            <form bindsubmit="ddjrw" report-submit="true">                
+                <view class="iconBtn" form-type="submit">
+                    <view class="remind-num">
+                        12
+                    </view>
+                    <image class="icon-img" src="https://owl.zjzenbo.com/images/miniwechat/icon/ec_4.png">
+                    </image>
+                    <view class="icon-text-view">维修任务</view>
+                </view>
+           </form>
+           <form bindsubmit="ddjrw" report-submit="true">                
+                <view class="iconBtn" form-type="submit">
+                    <view class="remind-num">
+                        12
+                    </view>
+                    <image class="icon-img" src="https://owl.zjzenbo.com/images/miniwechat/icon/ec_3.png">
+                    </image>
+                    <view class="icon-text-view">生产任务</view>
+                </view>
+           </form>
+           
+        </view>-->
+        <view class="datalist">
+            <view class="list">
+                <view class="list_tit">
+                    <view>
+                        保养任务
+                    </view>
+                    <button size="mini" class="btn">开始保养</button>
+                </view>
+                <view class="list_list">
+                    <view>
+                        点检任务：目测电器
+                    </view>
+                    <view>
+                        发起时间：2023-05-29 14:00:00
+                    </view>
+                    <view>
+                        检查时间：2023-05-29 14:00:00
+                    </view>
+                    <view>
+                        持续时间：50分钟
+                    </view>
+                </view>
+            </view>
+            
+        </view> 
+    </view>
+</view>

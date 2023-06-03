@@ -1,0 +1,48 @@
+<view class="container">
+    <view class="cu-form-group">
+		<view class="title">选择设备</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+				{{index?picker[index]:'请选择设备'}}
+			</view>
+		</picker>
+	</view>
+    <view class="cu-form-group">
+		<view class="title">选择订单</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+				{{index?picker[index]:'请选择项目'}}
+			</view>
+		</picker>
+	</view>
+    <view class="cu-form-group">
+		<view class="title">所需数量</view>
+		<input placeholder="请输入" type="number"></input>
+	</view>
+    <view class="cu-form-group">
+		<view class="title">暂停原因</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+				{{index?picker[index]:'请选择暂停原因'}}
+			</view>
+		</picker>
+	</view>
+    <view class="cu-form-group align-start">
+		<view class="title">备注</view>
+		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaBInput" placeholder="因为所以暂停"></textarea>
+	</view>
+    <view class="cu-form-group">
+		<view class="title">本次生产数量</view>
+		<input placeholder="请输入" type="number"></input>
+	</view>
+    
+  <!-- <view class="cu-form-group">
+		<view class="title">实际生产数量</view>
+		<input placeholder="请输入" type="number"></input>
+	</view> -->
+    
+    <view class="btn_box">
+        <button size="mini" class="cu-btn bg-grey">重置</button>
+        <button size="mini" class="cu-btn bg-green">暂停生产</button>
+    </view>
+</view>
