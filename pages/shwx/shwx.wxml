@@ -1,0 +1,110 @@
+<view class="container">
+    <view class="nav-title">
+        <view class="search">
+            <input type="text" placeholder="搜索公司" placeholder-class="placeholderStyle"/>
+        </view>
+        <view class="btn">
+          <button class="cu-btn  {{islist=='gdlb'?'bg-blue':'bg-grey'}}" bindtap="gdlb">工单列表</button>  
+        </view>    
+        <view class="btn">
+          <button class="cu-btn {{islist=='rylb'?'bg-blue':'bg-grey'}}" bindtap="rylb">人员列表</button>  
+        </view>    
+    </view>
+    <view class="gdlb" wx:if="{{islist=='gdlb'}}">
+        <view class="select">
+            <view class="select_tit">
+                <image src="../../image/sx.png" mode="" />
+                状态筛选 
+            </view>
+            <view class="select_box">
+                <button wx:for="{{selectBtn}}" wx:key="{{item.id}}" class="cu-btn {{item.bg}}" data-index="{{item.id}}" bindtap="selectB">{{item.state}}</button>
+            </view>
+            
+        </view>
+        <view class="list_container">
+        <view wx:for="{{box_list}}" class="box_list {{item.type}}" wx:key="index" catchtap="xzrq" catchtap="jqxq">
+            <view style="display: flex;justify-content: space-between;align-items: center;"  class="list_title {{'bt'+item.type}}">
+                <view>
+                    {{item.name}}
+                </view>
+                <view class="list_container_state">
+                    状态 :<button wx:if="{{item.state=='0'}}" class="cu-btn bg-red">未处理</button>
+                    <button wx:if="{{item.state=='1'}}" class="cu-btn bg-yellow">调度中</button>
+                    <button wx:if="{{item.state=='2'}}" class="cu-btn bg-blue">维修中</button>
+                    <button wx:if="{{item.state=='3'}}" class="cu-btn bg-grey">已完结</button>
+                </view>
+            </view>
+            
+            <view class="list_msg">
+                <view>
+                    设备型号:{{item.jcsj}}
+                </view>
+                <view>
+                    报警类型:{{item.bjlx}}
+                </view>
+                <view>
+                    故障时间:{{item.gzsj}}
+                </view>
+                
+                <view>
+                    持续时间:{{item.cxsj}}
+                </view>
+            </view>
+        </view>
+    </view>
+    </view>
+    <view class="gdlb" wx:if="{{islist=='rylb'}}">
+        <view class="select">
+            <view class="select_tit" style="display: flex;width: 50%;">
+                <image src="../../image/sx.png" mode="" />
+                <text>技能筛选</text>
+                <picker bindchange="bindPickerChange"
+                    style="width: 200rpx;border: 1rpx solid #ccc;padding-left: 20rpx;margin-left: 10rpx;"
+                    value="{{setIndex}}"
+                    range="{{activityArr}}"
+                    range-key="label">
+                        <view class="font30">
+                        {{activityArr[setIndex].label?activityArr[setIndex].label:'一级维修'}}
+                        </view>
+                </picker>
+                
+            </view>
+            <view class="select_tit" style="display: flex;width: 50%;">
+                <image src="../../image/sx.png" mode="" />
+                <text>人员状态</text>
+                <picker bindchange="bindPickerChange"
+                    style="width: 200rpx;border: 1rpx solid #ccc;padding-left: 20rpx;margin-left: 10rpx;"
+                    value="{{setIndex}}"
+                    range="{{activityArr}}"
+                    range-key="label">
+                        <view class="font30">
+                        {{activityArr[setIndex].label?activityArr[setIndex].label:'未分配'}}
+                        </view>
+                </picker>
+                
+            </view>
+        </view>
+        <view class="select_list">
+            <view class="data_lis" bindtap="ryxq">
+                <view class="lis_left">
+                    <view>
+                        姓名：张国荣(42岁)
+                    </view>
+                    <view>
+                        状态：未分配
+                    </view>
+                    <view>
+                        所在地：公司
+                    </view>
+                    <view>
+                        技能：八级维修工
+                    </view>
+                </view>
+                <view class="lis_right">
+                    <image src="../../image/gr.png" mode=""/>
+                </view>
+            </view>
+        </view>
+    </view>
+   
+</view>

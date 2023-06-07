@@ -1,4 +1,4 @@
-<view class="container">
+<view class="container" wx:if="{{fkt=='zkt'}}">
     <form style="display: flex;text-align: center;width: 95%;margin: 0 auto;justify-content: center;">
         <view style="display: flex;">
             <picker mode="date" header-text="开始时间"  value="{{kssj}}" bindchange="kssjChange">
@@ -49,4 +49,56 @@
     <view class='card'>
         <ec-canvas id="mychart" force-use-old-canvas="true" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
     </view>
+</view>
+<view class="container" wx:if="{{fkt=='fkt'}}">
+    <view class="nav-title">
+        <view class="search">
+            <input type="text" placeholder="搜索设备" placeholder-class="placeholderStyle"/>
+        </view>
+    </view>
+    <view class="gdlb" wx:if="{{islist=='gdlb'}}">
+        <view class="select">
+            <view class="select_tit">
+                <image src="../../image/sx.png" mode="" />
+                状态筛选 
+            </view>
+            <view class="select_box">
+                <button wx:for="{{selectBtn}}" wx:key="{{item.id}}" class="cu-btn {{item.bg}}" data-index="{{item.id}}" bindtap="selectB">{{item.state}}</button>
+            </view>
+            
+        </view>
+        <view class="list_container">
+        <view wx:for="{{box_list}}" class="box_list {{item.type}}" wx:key="index" catchtap="xzrq" catchtap="jqxq">
+            <view style="display: flex;justify-content: space-between;align-items: center;"  class="list_title {{'bt'+item.type}}">
+                <view>
+                    设备型号： {{item.jcsj}}
+                </view>
+                <view class="list_container_state">
+                    状态 :<button wx:if="{{item.state=='0'}}" class="cu-btn bg-red">故障</button>
+                    <button wx:if="{{item.state=='1'}}" class="cu-btn bg-yellow">维修</button>
+                    <button wx:if="{{item.state=='2'}}" class="cu-btn bg-blue">生产</button>
+                    <button wx:if="{{item.state=='3'}}" class="cu-btn bg-grey">换模</button>
+                </view>
+            </view>
+            
+            <view class="list_msg">
+                <!-- <view>
+                    设备型号:{{item.jcsj}}
+                </view> -->
+                <view>
+                    报警类型:{{item.bjlx}}
+                </view>
+                <view>
+                    故障时间:{{item.gzsj}}
+                </view>
+                
+                <view>
+                    持续时间:{{item.cxsj}}
+                </view>
+            </view>
+        </view>
+    </view>
+    </view>
+    
+   
 </view>

@@ -1,0 +1,88 @@
+<view class="container">
+    <view class="con_top">
+        <view class="data_lis" bindtap="ryxq">
+            <view class="lis_right">
+                    <image src="../../image/gr.png" mode=""/>
+                </view>
+                <view class="lis_left">
+                    <view>
+                        姓名：张国荣
+                    </view>
+                    <view>
+                        性别：男
+                    </view>
+                    <view>
+                        年龄：42岁
+                    </view>
+                    <view>
+                        公司职位：八级维修工
+                    </view>
+                </view>
+        </view>
+    </view>
+    <view class="con_bot">
+        <view class="bot_lis">
+            <view>
+                身份证号码
+            </view>
+            <view style="text-align: right;">
+                14230xxxxxxx05290292
+            </view>
+        </view>
+        
+        <view class="bot_lis">
+            <view>
+                联系电话
+            </view>
+            <view style="text-align: right;">
+                17600037756
+            </view>
+        </view>
+        <view class="bot_lis">
+            <view>
+                掌握技能
+            </view>
+            <view style="text-align: right;">
+                电工，php
+            </view>
+        </view>
+        <view class="bot_lis">
+            <view>
+                员工状态
+            </view>
+            <view style="text-align: right;">
+               未分配
+            </view>
+        </view>
+        <view class="bot_lis">
+            <view>
+                所在地
+            </view>
+            <view style="text-align: right;">
+                温州市
+            </view>
+        </view>
+        <view class="bot_lis">
+            <view>
+                近期维修记录
+            </view>
+            <view style="text-align: right;">
+               公司
+            </view>
+        </view>
+    </view>
+    <view class="box">
+        <view>
+            2023-05-06至2023-06-06 上海第一机械公司
+        </view>
+        <view>
+            2023-05-06至2023-06-06 上海第一机械公司
+        </view>
+        <view>
+            2023-05-06至2023-06-06 上海第一机械公司
+        </view>
+        <view>
+            。。。。。。。。。。。。。。。。。
+        </view>
+    </view>
+</view>

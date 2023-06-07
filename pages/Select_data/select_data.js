@@ -65,7 +65,97 @@ Page({
             { id: 4, label: '型号4' }
           ],
         setIndex:'所有型号',
-        submitLoading:false
+        submitLoading:false,
+        fkt:'',
+        islist:'gdlb',
+        isbtn:true,
+        selectBtn:[
+            {
+                id:0,
+                state:'生产',
+                bg:'bg-gray',
+            },
+            {
+                id:1,
+                state:'故障',
+                bg:'bg-gray',
+            },
+            {
+                id:2,
+                state:'维修',
+                bg:'bg-gray',
+            },
+            {
+                id:3,
+                state:'换模',
+                bg:'bg-gray',
+            }
+        ],
+        box_list:[
+            {
+                name:'DCDC',
+                bjlx:'通用故障',
+                gzsj:'2023-05-24 14:06',
+                jcsj:'BBAASS',
+                cxsj:'50分钟',
+                type:'bcred',
+                state:'0'
+                
+            },{
+                name:'DCDC',
+                bjlx:'通用故障',
+                gzsj:'2023-05-24 14:06',
+                jcsj:'BBAASS',
+                cxsj:'50分钟',
+                type:'bcyellow',
+                state:'1',
+            },{
+                name:'DCDC',
+                bjlx:'通用故障',
+                gzsj:'2023-05-24 14:06',
+                jcsj:'BBAASS',
+                cxsj:'50分钟',
+                type:'bcblue',
+                state:'2',
+            },{
+                name:'DCDC',
+                bjlx:'通用故障',
+                gzsj:'2023-05-24 14:06',
+                jcsj:'BBAASS',
+                cxsj:'50分钟',
+                type:'bcgray',
+                state:'3',
+            },
+        ],
+        activityArr: [
+            { id: 1, label: '型号1' },
+            { id: 2, label: '型号2' },
+            { id: 3, label: '型号3' },
+            { id: 4, label: '型号4' }
+          ],
+    },
+    jqxq(){
+        wx.navigateTo({
+          url: '../data_jqstate/data_jqstate',
+        })
+    },
+    selectB(e){
+        console.log(e.target.dataset.index)
+        let index = e.target.dataset.index
+        let arr = this.data.selectBtn
+        for(let i=0;i<arr.length;i++){
+            if(arr[i].id==index){
+                if(arr[i].bg=='bg-gray'){
+                    arr[i].bg = 'bg-blue'
+                }else{
+                    arr[i].bg = 'bg-gray'
+                }
+                
+            }
+        }
+        this.setData({
+            selectBtn:arr
+        })
     },
     getData() {
         wx.showLoading({
@@ -192,6 +282,10 @@ Page({
      */
     onShow() {
         this.getData()
+        let fkt = wx.getStorageSync('fkt')
+        this.setData({
+            fkt:fkt
+        })
     },
 
     /**

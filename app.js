@@ -6,7 +6,8 @@ App({
   },
   baseUrl: 'https://www.wanandroid.com',
   globalData: {
-    userInfo: null
+    userInfo: null,
+    list:[]
   },
   httpGet: function (url, data, loading, loadingMsg) {
     return this.httpBase("GET", url, data, loading, loadingMsg);

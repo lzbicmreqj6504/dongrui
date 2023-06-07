@@ -1,6 +1,7 @@
 .container {
     position: relative;
     padding-bottom: 100rpx;
+    background-color: #fff;
 }
 .list{
     width: 90%;
